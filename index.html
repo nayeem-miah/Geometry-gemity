@@ -20,9 +20,9 @@
         <!-- main content container -->
         <div class="flex flex-col md:flex-row">
             <!-- shape card container -->
-            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"> 
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
                 <!-- Triangle card -->
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-96 bg-base-100 shadow-xl hover:bg-[#FBBCED] p-5">
                     <figure><img src="./images/triangle.png" alt="triangle" /></figure>
                     <div class="card-body">
                       <h2 class="card-title justify-center text-4xl">Triangle</h2>
@@ -42,7 +42,8 @@
                     </div>
                   </div>
                   <!-- rectangle card -->
-                  <div class="card w-96 bg-base-100 shadow-xl">
+                  <div class="card w-96 bg-base-100 shadow-xl
+                   p-5 hover:bg-sky-400">
                     <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title text-4xl justify-center">rectangle</h2>
@@ -62,28 +63,91 @@
                     </div>
                   </div>
                   <!-- parallelogram card -->
-                
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-96 bg-base-100 shadow-xl hover:bg-purple-300 p-5">
                     <figure><img src="./images/parallelogram.png" alt="parallelogram" /></figure>
                     <div class="card-body">
-                      <h2 class="card-title">parallelogram</h2>
-                      <p>Area  = b X h</p>
+                      <h2 class="card-title text-4xl justify-center">parallelogram</h2>
+                      <p class="text-3xl">Area  = b X h</p>
+                      <!--parallelogram b -->
+                      <div class="flex">
+                        <input class="w-24 text-2xl rounded-sm bg-gray-100" type="text" name="" id="parallelogram-base" placeholder="base"><span class="ml-2 mr-4">cm</span>
+                      <!-- parallelogram height -->
+                      <input class="w-24 text-2xl rounded-sm bg-gray-100" type="text" name="" id="parallelogram-height" placeholder="height"><span class="ml-2 mr-4">cm</span>
+                      </div>
+                      <div>
+                        <p class="text-2xl">Area: <span id="parallelogram-area">0</span><span>cm</span><sup>2</sup></p>
+                      </div>
+
                       <div class="card-actions">
-                        <button class="btn btn-primary w-full">Calculate</button>
+                        <button onclick="calculateParallelogramArea()" class="btn btn-primary w-full">Calculate</button>
                       </div>
                     </div>
                   </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                  <!-- Rhombus -->
+                <div class="card w-96 bg-base-100 shadow-xl hover:bg-red-500 p-5">
+                    <figure><img src="./images/rhombus.png" alt="Rhombus" /></figure>
                     <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                      <h2 class="card-title text-4xl justify-center">Rhombus</h2>
+                      <p class="text-3xl">Area  = b X h</p>
+                      <!--parallelogram b -->
+                      <div class="flex">
+                        <input class="w-24 text-2xl rounded-sm bg-gray-100" type="text" name="" id="parallelogram-B" placeholder="base"><span class="ml-2 mr-4">cm</span>
+                      <!-- parallelogram height -->
+                      <input class="w-24 text-2xl rounded-sm bg-gray-100" type="text" name="" id="parallelogram-height" placeholder="height"><span class="ml-2 mr-4">cm</span>
+                      </div>
+                      <div>
+                        <p class="text-2xl">Area: <span id="parallelogram-area">0</span><span>cm</span><sup>2</sup></p>
+                      </div>
+
+                      <div class="card-actions">
+                        <button onclick="calculateParallelogramArea()" class="btn btn-primary w-full">Calculate</button>
                       </div>
                     </div>
                   </div>
-            </div>
+                  <!-- Pentagon part -->
+                <div class="card w-96 bg-base-100 shadow-xl hover:bg-green-600 p-5">
+                    <figure><img src="./images/pentagon.png" alt="Pentagon" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title text-4xl justify-center">Pentagon</h2>
+                      <p class="text-3xl">Area  = b X h</p>
+                      <!--parallelogram b -->
+                      <div class="flex">
+                        <input class="w-24 text-2xl rounded-sm bg-gray-100" type="text" name="" id="parallelogram-B" placeholder="base"><span class="ml-2 mr-4">cm</span>
+                      <!-- parallelogram height -->
+                      <input class="w-24 text-2xl rounded-sm bg-gray-100" type="text" name="" id="parallelogram-height" placeholder="height"><span class="ml-2 mr-4">cm</span>
+                      </div>
+                      <div>
+                        <p class="text-2xl">Area: <span id="parallelogram-area">0</span><span>cm</span><sup>2</sup></p>
+                      </div>
+
+                      <div class="card-actions">
+                        <button onclick="" class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Ellipse  part-->
+                <div class="card w-96 bg-base-100 shadow-xl hover:bg-orange-400 p-5">
+                    <figure><img src="./images/ellipse.png" alt="Ellipse" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title text-4xl justify-center">Ellipse</h2>
+                      <p class="text-3xl">Area  = b X h</p>
+                      <!--Ellipse b -->
+                      <div class="flex">
+                        <input class="w-24 text-2xl rounded-sm bg-gray-100" type="text" name="" id="parallelogram-B" placeholder="base"><span class="ml-2 mr-4">cm</span>
+                      <!-- Ellipse height -->
+                      <input class="w-24 text-2xl rounded-sm bg-gray-100" type="text" name="" id="parallelogram-height" placeholder="height"><span class="ml-2 mr-4">cm</span>
+                      </div>
+                      <div>
+                        <p class="text-2xl">Area: <span id="parallelogram-area">0</span><span>cm</span><sup>2</sup></p>
+                      </div>
+
+                      <div class="card-actions">
+                        <button onclick="" class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                
+            </div> 
             <!-- Area calculator container -->
             <div class="w-96 border-2 border-gray-700 rounded-md ">
                 <h3 class="text-3xl p-4 text-center">Area calculator</h3>
@@ -95,5 +159,6 @@
 
     <script src="JS/triangle-calculete.js"></script>
     <script src="JS/rectangle-area.js"></script>
+    <script src="JS/parallelogram-area.js"></script>
 </body>
 </html>
